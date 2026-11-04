@@ -2,29 +2,17 @@
 
 A RESTful backend API for an online storefront, built using Node.js, Express.js, TypeScript, and PostgreSQL.
 
-## Technologies
-
-- Node.js
-- Express.js
-- TypeScript
-- PostgreSQL
-- Docker
-- JWT
-- bcrypt
-
 ## Installation
 
-Clone the repository and install dependencies:
+Install the project dependencies:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
-cd YOUR_PROJECT_FOLDER
 npm install
 ```
 
 ## Environment Variables
 
-Create a `.env` file in the project root and configure the following variables:
+Create a `.env` file in the project root and configure the following environment variables:
 
 ```env
 POSTGRES_HOST=127.0.0.1
@@ -39,14 +27,14 @@ pepper=your_pepper
 TOKEN_SECRET=your_token_secret
 ```
 
-Never commit your actual `.env` file to GitHub.
+Do not commit your actual `.env` file to GitHub.
 
 ## Database Setup
 
-Start the PostgreSQL container using Docker Compose:
+Start Docker Compose:
 
 ```bash
-docker compose up -d
+docker compose up
 ```
 
 Create the development and test databases:
@@ -58,7 +46,7 @@ docker exec -it postgressql-postgres-1 psql -U postgres -c "CREATE DATABASE stor
 
 ## Database Migrations
 
-Run the database migrations:
+Run database migrations:
 
 ```bash
 db-migrate up
@@ -72,7 +60,7 @@ Start the development server:
 node build/server.js
 ```
 
-Run the tests:
+Run tests:
 
 ```bash
 npm run test
